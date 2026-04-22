@@ -221,3 +221,300 @@ body {
     .dashboard-container { grid-template-columns: 80px 1fr; }
     .sidebar span, .right-sidebar { display: none; }
 }
+
+/* SMALL ADDITIONS FOR ABOUT PAGE PHOTO ONLY */
+.profile-img-large {
+    width: 180px;
+    height: 180px;
+    border-radius: 20px;
+    object-fit: cover;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+}
+
+
+
+
+/* =========================================
+   PROJECT PAGE ALIGNMENT
+   ========================================= */
+
+.projects-layout-wrapper {
+    display: grid;
+    grid-template-columns: 1fr 300px; /* Main project takes more space, Insight is fixed */
+    overflow-y: auto;
+    height: 100%;
+}
+
+.project-main-area {
+    padding: 20px 20px 20px 40px;
+}
+
+.project-insight-area {
+    padding: 20px 20px 20px 0;
+    display: flex;
+    align-items: center; /* This keeps the insight card centered vertically to the project */
+}
+
+.detailed-project-card {
+    background: #fff;
+    border: 1px solid var(--border-color);
+    border-radius: 16px;
+    display: grid;
+    grid-template-columns: 1.2fr 1fr;
+    height: 240px; /* Fixed height so they line up perfectly */
+    overflow: hidden;
+}
+
+.proj-left { padding: 25px; }
+.proj-left h3 { font-size: 17px; margin-bottom: 10px; }
+.proj-desc { font-size: 12px; color: #666; line-height: 1.5; margin-bottom: 15px; }
+
+.tech-stack span {
+    font-size: 9px;
+    background: #f0f0ff;
+    color: var(--accent-purple);
+    padding: 3px 8px;
+    border-radius: 4px;
+    margin-right: 5px;
+    font-weight: 600;
+}
+
+.proj-right img { width: 100%; height: 100%; object-fit: cover; background: #f9f9f9; }
+
+/* Insight Card Styles */
+.insight-card {
+    padding: 15px;
+    border-radius: 12px;
+    width: 100%;
+}
+.insight-card h5 { font-size: 11px; margin-bottom: 5px; }
+.insight-card p { font-size: 11px; color: #444; line-height: 1.4; }
+
+.peach { background: #FFF4ED; border: 1px solid #FFE5D4; }
+.lavender { background: #F3F1FF; border: 1px solid #E0DBFF; }
+.lightblue { background: #E6F7FF; border: 1px solid #BAE7FF; }
+.lightgreen { background: #F2FFF2; border: 1px solid #D4FFD4; }
+
+/* Change main grid to 2 columns for Projects page */
+.projects-full-width {
+    grid-template-columns: 240px 1fr !important;
+}
+
+/* Container for rows */
+.projects-rows-container {
+    margin-top: 30px;
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+}
+
+/* One row = Project + Insight */
+.project-row {
+    display: grid;
+    grid-template-columns: 1fr 280px; /* Card takes rest, Insight is fixed */
+    gap: 20px;
+    align-items: center;
+}
+
+.detailed-project-card {
+    background: #fff;
+    border: 1px solid var(--border-color);
+    border-radius: 16px;
+    display: grid;
+    grid-template-columns: 1.2fr 1fr;
+    height: 250px;
+    overflow: hidden;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.02);
+}
+
+.proj-left { padding: 30px; }
+.proj-left h3 { font-size: 18px; margin-bottom: 12px; }
+.proj-desc { font-size: 13px; color: #666; line-height: 1.6; margin-bottom: 20px; }
+
+.tech-stack span {
+    font-size: 10px;
+    background: #f0f0ff;
+    color: var(--accent-purple);
+    padding: 4px 10px;
+    border-radius: 4px;
+    margin-right: 8px;
+    font-weight: 600;
+}
+
+.proj-right img { width: 100%; height: 100%; object-fit: cover; background: #f9f9f9; }
+
+/* Insight Card Styles */
+.insight-card {
+    padding: 20px;
+    border-radius: 16px;
+    height: fit-content;
+}
+
+.insight-card h5 { font-size: 12px; margin-bottom: 10px; display: flex; align-items: center; gap: 8px; }
+.insight-card p { font-size: 12px; color: #444; line-height: 1.5; }
+
+/* Colors */
+.peach { background: #FFF4ED; border: 1px solid #FFE5D4; }
+.lavender { background: #F3F1FF; border: 1px solid #E0DBFF; }
+.lightblue { background: #E6F7FF; border: 1px solid #BAE7FF; }
+.lightgreen { background: #F2FFF2; border: 1px solid #D4FFD4; }
+
+
+/* 1. Space between technologies and the link */
+.tech-stack {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    margin-bottom: 30px; /* Increased from 20px to 30px to push link down */
+}
+
+/* 2. Smaller pictures with space around them */
+.proj-right {
+    background: #fcfcfd; /* Very light grey background for the image area */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 25px; /* This creates the "space around" the picture */
+    border-left: 1px solid var(--border-color);
+}
+
+.proj-right img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain; /* 'contain' ensures the whole picture is visible without cropping */
+    border-radius: 8px; /* Rounds the corners of the picture itself */
+    box-shadow: 0 4px 12px rgba(0,0,0,0.08); /* Adds a soft shadow to make the photo "pop" */
+}
+
+/* 3. Extra breathing room for the text on the left */
+.proj-left { 
+    padding: 35px; /* Slightly more padding for a cleaner look */
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between; /* This spreads out the title, text, and link nicely */
+}
+
+
+/* Project Card - We remove 'height: 250px' and use 'min-height' */
+.detailed-project-card {
+    background: #fff;
+    border: 1px solid var(--border-color);
+    border-radius: 16px;
+    display: grid;
+    grid-template-columns: 1.2fr 1fr;
+    min-height: 280px; /* Changed from height to min-height so nothing disappears */
+    overflow: hidden;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.02);
+}
+
+/* Left Side - Text & Link */
+.proj-left { 
+    padding: 30px; 
+    display: flex; 
+    flex-direction: column; 
+    justify-content: space-between; /* This pushes the link to the very bottom */
+    align-items: flex-start;
+}
+
+/* Wrapping title and description together */
+.proj-text-top {
+    width: 100%;
+}
+
+.proj-left h3 { 
+    font-size: 18px; 
+    margin-bottom: 10px; 
+    color: var(--text-main); 
+}
+
+.proj-desc { 
+    font-size: 13px; 
+    color: #666; 
+    line-height: 1.6; 
+    margin-bottom: 15px; 
+}
+
+/* Tech tags space */
+.tech-stack {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 6px;
+    margin-bottom: 20px;
+}
+
+/* The Link - Making it clear and visible */
+.view-code-btn {
+    text-decoration: none;
+    font-size: 12px;
+    font-weight: 600;
+    color: var(--accent-purple);
+    border: 1px solid var(--accent-purple);
+    padding: 8px 16px;
+    border-radius: 8px;
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    transition: 0.2s;
+    background: transparent;
+}
+
+.view-code-btn:hover {
+    background: var(--accent-purple);
+    color: white;
+}
+
+/* Right Side - Image with space on ALL sides */
+.proj-right {
+    background: #f4f6f8; /* Soft background to show the space */
+    padding: 30px; /* Space from top, bottom, left, and right */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-left: 1px solid var(--border-color);
+}
+
+.proj-right img {
+    max-width: 100%; /* Ensures it doesn't spill out */
+    max-height: 180px; /* Controls the size */
+    object-fit: contain; /* Keeps the ratio perfect */
+    border-radius: 6px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1); /* Makes the picture look professional */
+}
+
+
+/* Styling for the View Code button across all pages */
+.view-code-btn {
+    text-decoration: none;
+    font-size: 11px; /* Slightly smaller for the dashboard cards */
+    font-weight: 600;
+    color: var(--accent-purple);
+    border: 1px solid var(--accent-purple);
+    padding: 6px 12px;
+    border-radius: 8px;
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    transition: 0.2s;
+    margin-top: 5px;
+    margin-bottom: 10px;
+}
+
+.view-code-btn:hover {
+    background: var(--accent-purple);
+    color: white;
+}
+
+/* Ensure the image placeholder doesn't overlap the button */
+.img-placeholder {
+    background: #eee;
+    height: 120px; /* Adjusted for dashboard view */
+    border-radius: 10px;
+    margin-top: 10px;
+    overflow: hidden;
+}
+
+.img-placeholder img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}

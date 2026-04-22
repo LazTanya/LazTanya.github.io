@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Projects | Tetiana Sirenka</title>
+    <!-- CSS Reference -->
+    <link rel="stylesheet" href="style.css">
+    <!-- Icons and Fonts -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <!-- 'projects-full-width' ensures the layout uses 2 columns (Sidebar + Content) -->
+    <div class="dashboard-container projects-full-width">
+        
+        <!-- LEFT SIDEBAR -->
+        <aside class="sidebar">
+            <div class="logo-area">
+                <i class="fa-solid fa-folder-open"></i>
+                <span>Portfolio</span>
+            </div>
+            <nav>
+                <a href="index.html" class="nav-item"><i class="fa-solid fa-border-all"></i> <span>Dashboard</span></a>
+                <a href="about.html" class="nav-item"><i class="fa-solid fa-user"></i> <span>About</span></a>
+                <a href="projects.html" class="nav-item active"><i class="fa-solid fa-code"></i> <span>Projects</span></a>
+                <div class="nav-divider"></div>
+                <a href="https://www.linkedin.com/in/tanya-sirenka" class="nav-item" target="_blank"><i class="fa-brands fa-linkedin"></i> <span>Linkedin</span></a>
+                <a href="https://github.com" class="nav-item" target="_blank"><i class="fa-brands fa-github"></i> <span>GitHub</span></a>
+                <a href="tel:+4853606477" class="nav-item"><i class="fa-solid fa-phone"></i> <span>+4853606477</span></a>
+                <a href="mailto:sirenkatanya@gmail.com" class="nav-item"><i class="fa-solid fa-envelope"></i> <span>Email</span></a>
+                <a href="https://t.me/tanyasirenka" class="nav-item" target="_blank"><i class="fa-brands fa-telegram"></i> <span>@tanyasirenka</span></a>
+            </nav>
+        </aside>
+
+        <!-- MAIN CONTENT AREA -->
+        <main class="main-content">
+            <header class="header-top">
+                <h1>Technical Projects</h1>
+                <p class="sub-text">Deep dive into data analysis, SQL, and product growth experiments.</p>
+            </header>
+
+            <div class="projects-rows-container">
+                
+                <!-- Project 1: Sales Lead Gen -->
+                <div class="project-row">
+                    <div class="detailed-project-card">
+                        <div class="proj-left">
+                            <div class="proj-text-top">
+                                <h3>Sales Lead Generation Analytics</h3>
+                                <p class="proj-desc">Analyzed a full year of lead generation performance. Prepared data in Google Sheets and used SQL to identify trends in conversion across various outreach channels.</p>
+                                <div class="tech-stack">
+                                    <span>SQL</span> <span>Tableau</span> <span>G-Sheets</span>
+                                </div>
+                            </div>
+                            <!-- Separated link at the bottom -->
+                            <a href="#" class="view-code-btn" target="_blank"><i class="fa-brands fa-github"></i> View Code</a>
+                        </div>
+                        <div class="proj-right">
+                            <img src="images/1_project.png" alt="Sales Analytics Dashboard">
+                        </div>
+                    </div>
+                    <!-- Insight Card aligned to the project -->
+                    <div class="insight-card peach">
+                        <h5><i class="fa-solid fa-lightbulb"></i> Insight</h5>
+                        <p>LinkedIn outreach showed 15% higher conversion than cold email for technical decision-makers.</p>
+                    </div>
+                </div>
+
+                <!-- Project 2: Customer Churn -->
+                <div class="project-row">
+                    <div class="detailed-project-card">
+                        <div class="proj-left">
+                            <div class="proj-text-top">
+                                <h3>Customer Churn Analysis</h3>
+                                <p class="proj-desc">Identified high-potential customer groups using Python. Performed data-driven segment analysis to find growth opportunities and reduce user drop-off.</p>
+                                <div class="tech-stack">
+                                    <span>Python</span> <span>Pandas</span> <span>Matplotlib</span>
+                                </div>
+                            </div>
+                            <a href="#" class="view-code-btn" target="_blank"><i class="fa-brands fa-github"></i> View Code</a>
+                        </div>
+                        <div class="proj-right">
+                            <img src="images/1_project.png" alt="Churn Analysis Chart">
+                        </div>
+                    </div>
+                    <div class="insight-card lavender">
+                        <h5><i class="fa-solid fa-chart-line"></i> Insight</h5>
+                        <p>Segmenting by activity level identified 'Power Users' as 3x more likely to refer new leads.</p>
+                    </div>
+                </div>
+
+                <!-- Project 3: A/B Testing -->
+                <div class="project-row">
+                    <div class="detailed-project-card">
+                        <div class="proj-left">
+                            <div class="proj-text-top">
+                                <h3>A/B Testing Messaging Optimization</h3>
+                                <p class="proj-desc">Designed and executed experiments on outreach messaging sequences. Analyzed engagement data to improve response rates via winning copy variations.</p>
+                                <div class="tech-stack">
+                                    <span>A/B Testing</span> <span>Excel</span> <span>Statistics</span>
+                                </div>
+                            </div>
+                            <a href="#" class="view-code-btn" target="_blank"><i class="fa-brands fa-github"></i> View Code</a>
+                        </div>
+                        <div class="proj-right">
+                            <img src="images/1_project.png" alt="A/B Testing Results">
+                        </div>
+                    </div>
+                    <div class="insight-card lightblue">
+                        <h5><i class="fa-solid fa-flask"></i> Insight</h5>
+                        <p>Personalized subject lines increased open rates by 22% during the 4-week testing period.</p>
+                    </div>
+                </div>
+
+                <!-- Project 4: KPI Tracking -->
+                <div class="project-row">
+                    <div class="detailed-project-card">
+                        <div class="proj-left">
+                            <div class="proj-text-top">
+                                <h3>KPI & Funnel Growth Tracking</h3>
+                                <p class="proj-desc">Built an automated tracker for funnel analysis and bidding performance. Ensured data consistency across HubSpot CRM and internal databases.</p>
+                                <div class="tech-stack">
+                                    <span>HubSpot CRM</span> <span>G-Sheets</span> <span>Automation</span>
+                                </div>
+                            </div>
+                            <a href="#" class="view-code-btn" target="_blank"><i class="fa-brands fa-github"></i> View Code</a>
+                        </div>
+                        <div class="proj-right">
+                            <img src="images/1_project.png" alt="KPI Tracker Screenshot">
+                        </div>
+                    </div>
+                    <div class="insight-card lightgreen">
+                        <h5><i class="fa-solid fa-bullseye"></i> Insight</h5>
+                        <p>Automating the data cleaning process reduced manual reporting time by 5 hours per week.</p>
+                    </div>
+                </div>
+
+            </div>
+        </main>
+    </div>
+
+</body>
+</html>
